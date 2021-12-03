@@ -72,6 +72,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="labeType" destination="w4V-8I-33q" id="yAX-y7-OGb"/>
                         <outlet property="labelYear" destination="HZL-u1-yRe" id="IeX-0x-LGe"/>
                         <outlet property="textFieldFound" destination="Ywq-ai-yxK" id="smM-7T-yEh"/>
                         <outlet property="textFieldText" destination="3Ts-RE-wLb" id="oI6-zR-7AB"/>

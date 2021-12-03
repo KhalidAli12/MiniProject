@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var textFieldText: UITextField!
     @IBOutlet weak var textFieldFound: UITextField!
     @IBOutlet weak var textview2: UITextView!
+    @IBOutlet weak var labeType: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         getInfo()
@@ -49,12 +50,13 @@ class ViewController: UIViewController {
             do {
                 let result = try JSONDecoder().decode(GetAPI.self, from: data!)
                 DispatchQueue.main.async {
-                    print(result.text!)
+//                    print(result.text!)
                     self.textview.text = result.text
-                    print(result.number!)
+//                    print(result.number!)
                     self.textFieldText.text = result.number?.description
-                    print(result.found!)
+//                    print(result.found!)
                     self.textFieldFound.text = result.found?.description
+                    self.labeType.text = result.type?.description
                 }
             } catch {
                 print("Error -> \(error)")
@@ -107,6 +109,7 @@ struct GetAPI : Codable {
 var number : Int?
 var text : String?
 var found : Bool?
+var type : String?
 }
 
 
