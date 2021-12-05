@@ -8,18 +8,18 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var indicatorView: UIActivityIndicatorView!
     @IBOutlet weak var labelYear: UILabel!
     @IBOutlet weak var textview: UITextView!
     @IBOutlet weak var textFieldText: UITextField!
     @IBOutlet weak var textFieldFound: UITextField!
     @IBOutlet weak var textview2: UITextView!
     @IBOutlet weak var labeType: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         getInfo()
         getDate1()
-        
-        // Do any additional setup after loading the view.
     }
     @IBAction func buttontest(_ sender: UIButton) {
         getInfo()
@@ -39,6 +39,9 @@ class ViewController: UIViewController {
         request.allHTTPHeaderFields = headers
         
         let session = URLSession.shared
+        // MARK: Indicator Started
+        indicatorView.startAnimating()
+        indicatorView.isHidden = false
         let dataTask = session.dataTask(with: request, completionHandler: { (data, response, error) -> Void in
             if (error != nil) {
                 print(error as Any)
@@ -46,7 +49,7 @@ class ViewController: UIViewController {
                 //                let httpResponse = response as? HTTPURLResponse
                 //                        print(httpResponse)
                 //  read json in data
-            }
+            
             do {
                 let result = try JSONDecoder().decode(GetAPI.self, from: data!)
                 DispatchQueue.main.async {
@@ -57,9 +60,12 @@ class ViewController: UIViewController {
 //                    print(result.found!)
                     self.textFieldFound.text = result.found?.description
                     self.labeType.text = result.type?.description
+                    self.indicatorView.stopAnimating()
+                    self.indicatorView.isHidden = true
                 }
             } catch {
                 print("Error -> \(error)")
+            }
             }
         })
         dataTask.resume()
@@ -116,7 +122,6 @@ var type : String?
 struct GetAPI2 : Codable {
     var year : Int?
     var text : String?
-//    var found2 : Bool?
 }
 
 
