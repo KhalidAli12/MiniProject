@@ -68,6 +68,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="zPc-yQ-uNA">
+                                <rect key="frame" x="146" y="63" width="100" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
@@ -78,6 +81,9 @@
                             <constraint firstItem="fE2-aM-H8q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="3cm-CO-7Fx"/>
                             <constraint firstItem="nMs-om-BxE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="5fn-fq-z12"/>
                             <constraint firstItem="HZL-u1-yRe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="C0o-JC-yNO"/>
+                            <constraint firstItem="3Ts-RE-wLb" firstAttribute="top" secondItem="zPc-yQ-uNA" secondAttribute="bottom" constant="21" id="E9R-xm-SX3"/>
+                            <constraint firstItem="zPc-yQ-uNA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="19" id="LKh-T1-i2d"/>
+                            <constraint firstItem="zPc-yQ-uNA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="146" id="OiS-BI-wnL"/>
                             <constraint firstItem="3Ts-RE-wLb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="OrO-C5-uhh"/>
                             <constraint firstItem="aRX-lH-bno" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="PjB-za-dGN"/>
                             <constraint firstItem="nMs-om-BxE" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="QzS-x5-cK5"/>
@@ -85,7 +91,6 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aRX-lH-bno" secondAttribute="trailing" constant="40" id="VFJ-n2-gDe"/>
                             <constraint firstItem="nMs-om-BxE" firstAttribute="top" secondItem="HZL-u1-yRe" secondAttribute="bottom" constant="40" id="Wc7-Ej-fQq"/>
                             <constraint firstItem="w4V-8I-33q" firstAttribute="top" secondItem="Ywq-ai-yxK" secondAttribute="bottom" constant="50" id="b6Q-Hw-Ypb"/>
-                            <constraint firstItem="3Ts-RE-wLb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="bDb-iG-Iv4"/>
                             <constraint firstItem="nMs-om-BxE" firstAttribute="top" secondItem="HZL-u1-yRe" secondAttribute="bottom" constant="40" id="boD-ya-Q2x"/>
                             <constraint firstItem="HZL-u1-yRe" firstAttribute="top" secondItem="fE2-aM-H8q" secondAttribute="bottom" constant="30" id="clh-lF-EmE"/>
                             <constraint firstItem="fE2-aM-H8q" firstAttribute="leading" secondItem="nMs-om-BxE" secondAttribute="leading" id="ecV-ux-48j"/>
@@ -96,9 +101,11 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3Ts-RE-wLb" secondAttribute="trailing" constant="40" id="sZU-bR-LZC"/>
                             <constraint firstItem="Ywq-ai-yxK" firstAttribute="top" secondItem="3Ts-RE-wLb" secondAttribute="bottom" constant="40" id="tCP-By-4dL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ywq-ai-yxK" secondAttribute="trailing" constant="40" id="ucB-vg-SVj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zPc-yQ-uNA" secondAttribute="trailing" constant="168" id="yFo-sw-Pj4"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="indicatorView" destination="zPc-yQ-uNA" id="A8t-7p-pqf"/>
                         <outlet property="labeType" destination="w4V-8I-33q" id="yAX-y7-OGb"/>
                         <outlet property="labelYear" destination="HZL-u1-yRe" id="IeX-0x-LGe"/>
                         <outlet property="textFieldFound" destination="Ywq-ai-yxK" id="smM-7T-yEh"/>
