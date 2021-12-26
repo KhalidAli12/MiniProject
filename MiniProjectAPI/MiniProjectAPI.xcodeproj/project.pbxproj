@@ -14,6 +14,7 @@
 		B908D7A12757B80F0070CE24 /* MiniProjectAPI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B908D79F2757B80F0070CE24 /* MiniProjectAPI.xcdatamodeld */; };
 		B908D7A32757B8120070CE24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B908D7A22757B8120070CE24 /* Assets.xcassets */; };
 		B908D7A62757B8120070CE24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B908D7A42757B8120070CE24 /* LaunchScreen.storyboard */; };
+		B90A7EDA275E935B002CE7DA /* SelectTypeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90A7ED9275E935B002CE7DA /* SelectTypeVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		B908D7A22757B8120070CE24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B908D7A52757B8120070CE24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B908D7A72757B8120070CE24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B90A7ED9275E935B002CE7DA /* SelectTypeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTypeVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				B908D7982757B80F0070CE24 /* SceneDelegate.swift */,
 				B908D79A2757B80F0070CE24 /* ViewController.swift */,
 				B908D79C2757B80F0070CE24 /* Main.storyboard */,
+				B90A7ED9275E935B002CE7DA /* SelectTypeVC.swift */,
 				B908D7A22757B8120070CE24 /* Assets.xcassets */,
 				B908D7A42757B8120070CE24 /* LaunchScreen.storyboard */,
 				B908D7A72757B8120070CE24 /* Info.plist */,
@@ -144,6 +147,7 @@
 				B908D79B2757B80F0070CE24 /* ViewController.swift in Sources */,
 				B908D7A12757B80F0070CE24 /* MiniProjectAPI.xcdatamodeld in Sources */,
 				B908D7972757B80F0070CE24 /* AppDelegate.swift in Sources */,
+				B90A7EDA275E935B002CE7DA /* SelectTypeVC.swift in Sources */,
 				B908D7992757B80F0070CE24 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
